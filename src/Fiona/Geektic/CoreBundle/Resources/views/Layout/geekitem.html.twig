@@ -1,0 +1,38 @@
+
+{% for geek in geeks %}
+    <section class="bloc">
+
+        <a href="{{ path('fiona_geektic_core_profile',{id:geek.id}) }}">
+            <img src="{{ asset('photos/'~geek.id~'.png') }}"  class="avatar">
+        </a>
+
+        <header>
+
+            {% set avatar = geek.gender|upper == 'FEMALE' ? 'images/female.png' : 'images/male.png' %}
+
+            <a href="{{ path('fiona_geektic_core_profile',{id:geek.id}) }}" style="background: url('{{ asset(avatar) }}') no-repeat 0 3px;padding-left:30px;">
+            {{ geek.firstname }} {{ geek.lastname }}
+            </a>
+			
+			<span class="right">
+				Inscrit le {{ geek.datesign|date('d/m/Y') }}
+			</span>
+        </header>
+
+        <section>
+
+
+
+            {% if geek.interests|length <= 0 %}
+                Cette personne n'a aucun centres d'intérêts
+            {% endif %}
+
+            {% for interest in geek.interests %}
+                <div class="interet"><div class="vign"></div>{{ interest.label }}</div>
+            {% endfor %}
+
+
+        </section>
+
+    </section>
+{% endfor %}

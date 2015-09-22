@@ -1,0 +1,65 @@
+#consultations{
+	margin-top:10px;
+}
+
+#consultations table{
+	margin-top:10px;
+	width:100%;
+}
+
+#consultations tr{
+	background:white;
+	
+}
+
+#consultations tr.head{
+	background:#DDD;
+	
+}
+
+
+
+#consultations tr.odd{
+	background:#EEE;
+}
+
+#consultations tr.even{
+	background:white;
+}
+
+#consultations tr:hover{
+	background:#DDD;
+}
+
+#consultations th{
+	text-align:left;
+	padding:5px;
+}
+
+section#search_corps section.bloc #consultations th a{
+	color:black;
+}
+
+section#search_corps section.bloc #consultations th a:hover{
+	text-decoration:none;
+	color:#555;
+}
+
+
+
+#consultations td{
+	margin-top:50px;
+	padding:5px;
+}
+
+#consultationTab{
+	display:none;	
+}
+
+section#search_corps section.bloc a.mailto{
+	color:#555;
+}
+
+section#search_corps section.bloc a.mailto:hover{
+	color:#111;
+}

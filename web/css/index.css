@@ -1,0 +1,232 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-family: Century Gothic, Arial;
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+img {
+	border: none;
+}
+
+.clear {
+	clear: both;
+}
+
+section#global {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow: auto;
+	background-image: url("../images/back.jpg");
+	background-size: cover;
+}
+
+header#top {
+	height: 40px;
+	line-height: 40px;
+	background: url('../images/header-bg.png') repeat-x;
+	background-color: #444;
+}
+
+section#wrapper {
+	width: 970px;
+	margin: 0 auto;
+	margin-top: -40px;
+}
+
+aside#titre {
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	color: #EEE;
+	font-weight: bold;
+	text-shadow: 0 0.5px 1.5px #5E452C;
+	-moz-text-shadow: 0 0.5px 1.5px #5E452C;
+	-webkit-text-shadow: 0 0.5px 1.5px #5E452C;
+}
+
+aside#titre img {
+	float: left;
+	height: 40px;
+	width: 60px;
+}
+
+aside#rechercher {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+}
+
+aside#rechercher [type=text] {
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	color: #666666;
+	border: 1px solid #dddddd;
+	border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+aside#rechercher [type=submit] {
+	background: transparent;
+	border: none;
+	width: 25px;
+	height: 27px;
+	background-color: #EEE;
+	background-image: url('../images/searchicon.png');
+	float: right;
+	margin-top: 7px;
+	border-top: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	border-radius: 0 3px 3px 0;
+	/*background-image : url("");*/
+}
+
+section#corps {
+	margin: 0 auto;
+	width: 500px;
+	border-radius: 5px;
+	margin-top: 70px;
+	box-shadow: 0 0 8px black;
+	-moz-box-shadow: 0 0 8px black;
+	-webkit-box-shadow: 0 0 8px black;
+}
+
+section#corps header {
+	height: 100px;
+	background: url('../images/cover.jpg');
+	background-size: cover;
+	color: white;
+	padding: 10px;
+	box-shadow: 0 2px 4px black;
+	-moz-box-shadow: 0 2px 4px black;
+	-webkit-box-shadow: 0 2px 4px black;
+}
+
+section#corps header h1 {
+	font-size: 28px;
+}
+
+section#corps header h3 {
+	
+}
+
+section#corps aside {
+	width: 210px;
+	float: left;
+	background-color: rgba(111, 111, 111, 0.5);
+	min-height: 200px;
+	padding: 10px;
+	color: white;
+}
+
+section#corps aside span {
+	font-size: 11px;
+}
+
+section#corps section {
+	background-color: rgba(22, 22, 22, 0.5);
+	margin-left: 230px;
+	min-height: 200px;
+	padding: 10px;
+	color: white;
+}
+
+section#corps section input[type=text] {
+	width: 230px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+
+section#corps section input[type=submit] {
+	width: 250px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	border: 1px solid #dddddd;
+	background: rgba(111, 111, 111, 0.5);
+	margin-top: 10px;
+	border-radius: 3px;
+	color: #ffffff;
+	transition: 0.3s all ease-in;
+	-webkit-transition: 0.3s all ease-in;
+	-moz-transition: 0.3s all ease-in;
+	cursor: pointer;
+	cursor: hand;
+}
+
+section li.male {
+	background: url('../images/male.png') no-repeat;
+	padding-left: 30px;
+}
+
+section li.female {
+	background: url('../images/female.png') no-repeat;
+	padding-left: 30px;
+}
+
+section li.both {
+	background: url('../images/both.png') no-repeat;
+	padding-left: 30px;
+}
+
+footer {
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(101, 101, 101, 0.5);
+	width: 100%;
+	text-align: center;
+	font-size: 11px;
+}
+
+section#corps section input[type=submit]:hover {
+	background: rgba(111, 111, 111, 1);
+}
+
+footer {
+	background-color: rgba(101, 101, 101, 0.5);
+	bottom: 0;
+	font-size: 11px;
+	height: 23px;
+	line-height: 23px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+#jis_scrolltop {
+
+	/* you can edit this part put an image for exemple... */
+	width:46px;
+	height:46px;
+	background:url('../images/arrow.png') no-repeat ;
+	
+	/* you can edit this part if you want to change the scrollTop position */
+	position:fixed;
+	bottom:0;
+	right:0;
+	margin-bottom:40px;
+	margin-right:40px;
+	
+	/* needed */
+	display:none;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geektic</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/search.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/profile.css') }}">
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script>
+            jQuery(function($){
+                if ($("[name=ggender]:checked").length == "0") { $('[name=ggender]').attr('checked','checked'); }
+            });
+    
+    
+            function consultTab($this){
+    
+                if ($('#consultationTab:visible').length == '0'){
+                    $('#consultationTab').slideDown();
+                    $this.html('[- Détails]');
+                }
+                else {
+                    $('#consultationTab').slideUp();
+                    $this.html('[+ Détails]');
+                }
+    
+            }
+    
+    
+        </script>
+    </head>
+
+
+    <body>
+
+        <a id="clicking" href="javascript:scrollToTop()"><div id="jis_scrolltop"></div></a>
+
+        <section id="global">
+
+            {% block content %}{% endblock %}
+
+            <footer>
+                www.geektic.fr - site de rencontre pour geek - copyright &copy; 2013 - JRK
+            </footer>
+
+        </section>
+
+    </body>
+
+
+
+</html>

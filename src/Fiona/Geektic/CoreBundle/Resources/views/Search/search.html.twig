@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+        <header id="top"></header>
+
+        <section id="wrapper">
+
+            {% include 'FionaGeekticCoreBundle:Layout:topsearch.html.twig' %}
+
+
+            <section id="search_corps">
+
+                {% include 'FionaGeekticCoreBundle:Layout:leftsearch.html.twig' %}
+
+
+                <div class="listing">
+
+
+                    {% if geeks|length <= 0 %}
+                        <section class="blocempty">
+                            <section>
+                                No profile match your query
+                            </section>
+                        </section>
+                    {% else %}
+                        {% include 'FionaGeekticCoreBundle:Layout:geekitem.html.twig' %}
+                    {% endif %}
+
+
+                </div>
+
+            </section>
+        </section>
+
+
+
+{% endblock %}

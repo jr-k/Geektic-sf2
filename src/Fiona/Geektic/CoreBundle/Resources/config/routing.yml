@@ -1,0 +1,11 @@
+fiona_geektic_core_homepage:
+    path:     /
+    defaults: { _controller: FionaGeekticCoreBundle:Home:home}
+
+fiona_geektic_core_search:
+    path:     /search
+    defaults: { _controller: FionaGeekticCoreBundle:Search:search}
+
+fiona_geektic_core_profile:
+    path:     /profile/{id}
+    defaults: { _controller: FionaGeekticCoreBundle:Profile:profile, id:-1}
