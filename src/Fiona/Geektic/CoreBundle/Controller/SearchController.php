@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Controller;
+namespace Fiona\Geek2geek\CoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -42,7 +42,7 @@ class SearchController extends BaseController
             }
         }
 
-        return $this->render('FionaGeekticCoreBundle:Search:search.html.twig', array(
+        return $this->render('FionaGeek2geekCoreBundle:Search:search.html.twig', array(
             'geeks' => $matchGeeks,
             'interets' =>  $this->getRepository('Interest')->findAll(),
             'gsearchvalue' => $name,

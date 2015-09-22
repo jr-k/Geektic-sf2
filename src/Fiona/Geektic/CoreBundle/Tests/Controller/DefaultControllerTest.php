@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Tests\Controller;
+namespace Fiona\Geek2geek\CoreBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

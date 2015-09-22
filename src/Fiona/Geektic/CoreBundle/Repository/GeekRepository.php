@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Repository;
+namespace Fiona\Geek2geek\CoreBundle\Repository;
 
 /**
  * GeekRepository
@@ -17,7 +17,7 @@ class GeekRepository extends \Doctrine\ORM\EntityRepository
     {
         $queryBuilder = $this->_em->createQueryBuilder()
             ->select('g')
-            ->from('FionaGeekticCoreBundle:Geek','g')
+            ->from('FionaGeek2geekCoreBundle:Geek','g')
             ->orderBy('g.firstname','ASC')
         ;
 

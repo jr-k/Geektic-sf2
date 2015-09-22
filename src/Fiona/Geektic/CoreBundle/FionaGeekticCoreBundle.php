@@ -1,9 +1,9 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle;
+namespace Fiona\Geek2geek\CoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class FionaGeekticCoreBundle extends Bundle
+class FionaGeek2geekCoreBundle extends Bundle
 {
 }

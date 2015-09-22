@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Repository;
+namespace Fiona\Geek2geek\CoreBundle\Repository;
 
 /**
  * VisitRepository

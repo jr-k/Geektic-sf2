@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Entity;
+namespace Fiona\Geek2geek\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Geek
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Fiona\Geektic\CoreBundle\Repository\GeekRepository")
+ * @ORM\Entity(repositoryClass="Fiona\Geek2geek\CoreBundle\Repository\GeekRepository")
  */
 class Geek
 {
@@ -212,11 +212,11 @@ class Geek
     /**
      * Add interest
      *
-     * @param \Fiona\Geektic\CoreBundle\Entity\Interest $interest
+     * @param \Fiona\Geek2geek\CoreBundle\Entity\Interest $interest
      *
      * @return Geek
      */
-    public function addInterest(\Fiona\Geektic\CoreBundle\Entity\Interest $interest)
+    public function addInterest(\Fiona\Geek2geek\CoreBundle\Entity\Interest $interest)
     {
         $this->interests[] = $interest;
 
@@ -226,9 +226,9 @@ class Geek
     /**
      * Remove interest
      *
-     * @param \Fiona\Geektic\CoreBundle\Entity\Interest $interest
+     * @param \Fiona\Geek2geek\CoreBundle\Entity\Interest $interest
      */
-    public function removeInterest(\Fiona\Geektic\CoreBundle\Entity\Interest $interest)
+    public function removeInterest(\Fiona\Geek2geek\CoreBundle\Entity\Interest $interest)
     {
         $this->interests->removeElement($interest);
     }
@@ -246,11 +246,11 @@ class Geek
     /**
      * Add visit
      *
-     * @param \Fiona\Geektic\CoreBundle\Entity\Visit $visit
+     * @param \Fiona\Geek2geek\CoreBundle\Entity\Visit $visit
      *
      * @return Geek
      */
-    public function addVisit(\Fiona\Geektic\CoreBundle\Entity\Visit $visit)
+    public function addVisit(\Fiona\Geek2geek\CoreBundle\Entity\Visit $visit)
     {
         $this->visits[] = $visit;
 
@@ -260,9 +260,9 @@ class Geek
     /**
      * Remove visit
      *
-     * @param \Fiona\Geektic\CoreBundle\Entity\Visit $visit
+     * @param \Fiona\Geek2geek\CoreBundle\Entity\Visit $visit
      */
-    public function removeVisit(\Fiona\Geektic\CoreBundle\Entity\Visit $visit)
+    public function removeVisit(\Fiona\Geek2geek\CoreBundle\Entity\Visit $visit)
     {
         $this->visits->removeElement($visit);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Entity;
+namespace Fiona\Geek2geek\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Interest
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Fiona\Geektic\CoreBundle\Repository\InterestRepository")
+ * @ORM\Entity(repositoryClass="Fiona\Geek2geek\CoreBundle\Repository\InterestRepository")
  */
 class Interest
 {
@@ -81,11 +81,11 @@ class Interest
     /**
      * Add geek
      *
-     * @param \Fiona\Geektic\CoreBundle\Entity\Geek $geek
+     * @param \Fiona\Geek2geek\CoreBundle\Entity\Geek $geek
      *
      * @return Interest
      */
-    public function addGeek(\Fiona\Geektic\CoreBundle\Entity\Geek $geek)
+    public function addGeek(\Fiona\Geek2geek\CoreBundle\Entity\Geek $geek)
     {
         $this->geeks[] = $geek;
 
@@ -95,9 +95,9 @@ class Interest
     /**
      * Remove geek
      *
-     * @param \Fiona\Geektic\CoreBundle\Entity\Geek $geek
+     * @param \Fiona\Geek2geek\CoreBundle\Entity\Geek $geek
      */
-    public function removeGeek(\Fiona\Geektic\CoreBundle\Entity\Geek $geek)
+    public function removeGeek(\Fiona\Geek2geek\CoreBundle\Entity\Geek $geek)
     {
         $this->geeks->removeElement($geek);
     }

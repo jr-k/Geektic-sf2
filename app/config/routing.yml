@@ -1,3 +1,3 @@
-fiona_geektic_core:
-    resource: "@FionaGeekticCoreBundle/Resources/config/routing.yml"
+fiona_geek2geek_core:
+    resource: "@FionaGeek2geekCoreBundle/Resources/config/routing.yml"
     prefix:   /

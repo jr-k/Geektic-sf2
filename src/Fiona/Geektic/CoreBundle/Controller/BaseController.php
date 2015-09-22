@@ -1,8 +1,8 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Controller;
+namespace Fiona\Geek2geek\CoreBundle\Controller;
 
-use Fiona\Geektic\ApiBundle\Exception\ApiAccessDenied;
+use Fiona\Geek2geek\ApiBundle\Exception\ApiAccessDenied;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -42,7 +42,7 @@ class BaseController extends Controller {
         $output = array();
 
         foreach($errors as $error) {
-            $output[] = $this->get('translator')->trans($error->getMessage(), array(), 'FionaGeekticCoreBundle');
+            $output[] = $this->get('translator')->trans($error->getMessage(), array(), 'FionaGeek2geekCoreBundle');
         }
 
         return new JsonResponse(array('errors' => $output), Response::HTTP_BAD_REQUEST);
@@ -54,7 +54,7 @@ class BaseController extends Controller {
     {
         return new JsonResponse(array(
             'code' => $exception->getStatusCode(),
-            'message' => $this->get('translator')->trans($exception->getMessage(), array(), 'FionaGeekticCoreBundle')
+            'message' => $this->get('translator')->trans($exception->getMessage(), array(), 'FionaGeek2geekCoreBundle')
         ), Response::HTTP_BAD_REQUEST);
     }
 
@@ -124,7 +124,7 @@ class BaseController extends Controller {
         return !empty($email) && preg_match(('/^[a-z\p{L}0-9!#$%&\'*+\/=?^`{}|~_-]+[.a-z\p{L}0-9!#$%&\'*+\/=?^`{}|~_-]*@[a-z\p{L}0-9]+[._a-z\p{L}0-9-]*\.[a-z0-9]+$/ui'), $email);
     }
 
-    protected function trans($path, $array = null, $file = 'FionaGeekticCoreBundle') {
+    protected function trans($path, $array = null, $file = 'FionaGeek2geekCoreBundle') {
         if ($array == null)
             $array = array();
         return $this->get('translator')->trans($path, $array, $file);
@@ -161,7 +161,7 @@ class BaseController extends Controller {
      *
      * @return Doctrine\ORM\EntityRepository
      */
-    protected function getRepository($class, $path = "FionaGeekticCoreBundle") {
+    protected function getRepository($class, $path = "FionaGeek2geekCoreBundle") {
         return $this->getDoctrine()->getManager()->getRepository($path . ":" . $class);
     }
 

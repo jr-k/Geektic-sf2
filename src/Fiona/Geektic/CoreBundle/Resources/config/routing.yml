@@ -1,11 +1,11 @@
-fiona_geektic_core_homepage:
+fiona_geek2geek_core_homepage:
     path:     /
-    defaults: { _controller: FionaGeekticCoreBundle:Home:home}
+    defaults: { _controller: FionaGeek2geekCoreBundle:Home:home}
 
-fiona_geektic_core_search:
+fiona_geek2geek_core_search:
     path:     /search
-    defaults: { _controller: FionaGeekticCoreBundle:Search:search}
+    defaults: { _controller: FionaGeek2geekCoreBundle:Search:search}
 
-fiona_geektic_core_profile:
+fiona_geek2geek_core_profile:
     path:     /profile/{id}
-    defaults: { _controller: FionaGeekticCoreBundle:Profile:profile, id:-1}
+    defaults: { _controller: FionaGeek2geekCoreBundle:Profile:profile, id:-1}

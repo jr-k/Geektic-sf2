@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Entity;
+namespace Fiona\Geek2geek\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Visit
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Fiona\Geektic\CoreBundle\Repository\VisitRepository")
+ * @ORM\Entity(repositoryClass="Fiona\Geek2geek\CoreBundle\Repository\VisitRepository")
  */
 class Visit
 {
@@ -108,11 +108,11 @@ class Visit
     /**
      * Set geek
      *
-     * @param \Fiona\Geektic\CoreBundle\Entity\Geek $geek
+     * @param \Fiona\Geek2geek\CoreBundle\Entity\Geek $geek
      *
      * @return Visit
      */
-    public function setGeek(\Fiona\Geektic\CoreBundle\Entity\Geek $geek = null)
+    public function setGeek(\Fiona\Geek2geek\CoreBundle\Entity\Geek $geek = null)
     {
         $this->geek = $geek;
 
@@ -122,7 +122,7 @@ class Visit
     /**
      * Get geek
      *
-     * @return \Fiona\Geektic\CoreBundle\Entity\Geek
+     * @return \Fiona\Geek2geek\CoreBundle\Entity\Geek
      */
     public function getGeek()
     {

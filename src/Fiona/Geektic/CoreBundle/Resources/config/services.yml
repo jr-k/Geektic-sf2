@@ -1,4 +1,4 @@
 services:
-#    fiona_geektic_core.example:
-#        class: Fiona\Geektic\CoreBundle\Example
+#    fiona_geek2geek_core.example:
+#        class: Fiona\Geek2geek\CoreBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]

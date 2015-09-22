@@ -1,8 +1,8 @@
 <?php
 
-namespace Fiona\Geektic\CoreBundle\Controller;
+namespace Fiona\Geek2geek\CoreBundle\Controller;
 
-use Fiona\Geektic\CoreBundle\Entity\Visit;
+use Fiona\Geek2geek\CoreBundle\Entity\Visit;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ProfileController extends BaseController
@@ -12,7 +12,7 @@ class ProfileController extends BaseController
         $geek = $this->getRepository('Geek')->find($id);
 
         if (!is_object($geek)) {
-            return $this->redirect($this->generateUrl('fiona_geektic_core_homepage'));
+            return $this->redirect($this->generateUrl('fiona_geek2geek_core_homepage'));
         }
 
         $visit = new Visit();
@@ -21,7 +21,7 @@ class ProfileController extends BaseController
         $this->persistAndFlush($visit);
 
 
-        return $this->render('FionaGeekticCoreBundle:Profile:profile.html.twig', array(
+        return $this->render('FionaGeek2geekCoreBundle:Profile:profile.html.twig', array(
             'geek' => $geek,
             'interets' =>  $this->getRepository('Interest')->findAll(),
         ));

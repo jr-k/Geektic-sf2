@@ -2,7 +2,7 @@
 {% for geek in geeks %}
     <section class="bloc">
 
-        <a href="{{ path('fiona_geektic_core_profile',{id:geek.id}) }}">
+        <a href="{{ path('fiona_geek2geek_core_profile',{id:geek.id}) }}">
             <img src="{{ asset('photos/'~geek.id~'.png') }}"  class="avatar">
         </a>
 
@@ -10,7 +10,7 @@
 
             {% set avatar = geek.gender|upper == 'FEMALE' ? 'images/female.png' : 'images/male.png' %}
 
-            <a href="{{ path('fiona_geektic_core_profile',{id:geek.id}) }}" style="background: url('{{ asset(avatar) }}') no-repeat 0 3px;padding-left:30px;">
+            <a href="{{ path('fiona_geek2geek_core_profile',{id:geek.id}) }}" style="background: url('{{ asset(avatar) }}') no-repeat 0 3px;padding-left:30px;">
             {{ geek.firstname }} {{ geek.lastname }}
             </a>
 			
