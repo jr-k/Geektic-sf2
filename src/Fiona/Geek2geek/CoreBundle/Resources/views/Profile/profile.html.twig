@@ -16,7 +16,26 @@
 
                 <div class="listing">
 
+
+                    <a href="{{ path('fiona_geek2geek_core_profile',{id:geek.id}) }}">
+                        <img src="{{ asset(geek.photo) }}"  style= "width:200px; height:220px; padding-left:5%;" class="avatar">
+                    </a>
+
+                    <header>
+
+                        {% set avatar = geek.gender|upper == 'FEMALE' ? 'images/female.png' : 'images/male.png' %}
+
+                        <a href="{{ path('fiona_geek2geek_core_profile',{id:geek.id}) }}" style="background: url('{{ asset(avatar) }}') no-repeat 0 3px;padding-left:30px;">
+                        {{ geek.firstname }} {{ geek.lastname }}
+                        </a>
+                        
+                        <span class="right">
+                            Register on {{ geek.datesign|date('d/m/Y') }}
+                        </span>
+                    </header>
+
                     <section style="background: rgba(255,255,255,0.7);padding:10px;">
+
                         <strong>Email : </strong> <a class="mailto" href="mailto:{{ geek.email }}">{{ geek.email }}</a><br />
 
                         {% if geek.interests|length <= 0 %}
