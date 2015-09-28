@@ -1,7 +1,7 @@
 <aside>
     <header>
         <img src="{{ asset('images/searchiconbar.png') }}">
-        Rechercher
+        Search
     </header>
 
     <section>
@@ -10,17 +10,17 @@
             <ul>
                 <li class="male">
                     <input type="radio" name="ggender" value="MALE" id="gmale" {% if ggendervalue is defined and ggendervalue == 'MALE' %}CHECKED{% endif %}>
-                    <label for="gmale">Homme</label>
+                    <label for="gmale">Men</label>
                 </li>
 
                 <li class="female">
                     <input type="radio" name="ggender" value="FEMALE" id="gfemale" {% if ggendervalue is defined and  ggendervalue == 'FEMALE' %}CHECKED{% endif %}>
-                    <label for="gfemale">Femme</label>
+                    <label for="gfemale">Women</label>
                 </li>
 
                 <li class="both">
                     <input type="radio" name="ggender" value="BOTH" id="gboth" {% if ggendervalue is defined and (ggendervalue == 'BOTH' or ggendervalue == '') %}CHECKED{% endif %}>
-                    <label for="gboth">Tous</label>
+                    <label for="gboth">All</label>
                 </li>
             </ul>
 
@@ -38,7 +38,7 @@
 
             </div>
 
-            <input type="submit" value="Rechercher" name="valider_recherche" id="valider">
+            <input type="submit" value="Search" name="valider_recherche" id="valider">
         </form>
 
 

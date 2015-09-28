@@ -15,7 +15,7 @@
             </a>
 			
 			<span class="right">
-				Inscrit le {{ geek.datesign|date('d/m/Y') }}
+				Register on {{ geek.datesign|date('d/m/Y') }}
 			</span>
         </header>
 
@@ -24,7 +24,7 @@
 
 
             {% if geek.interests|length <= 0 %}
-                Cette personne n'a aucun centres d'intérêts
+                This person has no center of interest
             {% endif %}
 
             {% for interest in geek.interests %}

@@ -20,7 +20,7 @@
                         <strong>Email : </strong> <a class="mailto" href="mailto:{{ geek.email }}">{{ geek.email }}</a><br />
 
                         {% if geek.interests|length <= 0 %}
-                            <br />Cette personne n'a aucun centres d'intérêts
+                            <br />This person has no center of interest
                         {% endif %}
 
                         {% for interest in geek.interests %}
@@ -37,7 +37,7 @@
                             <tr class="head">
                                 <th>
                                     <a href="javascript:void(0);" onclick="consultTab($(this));" style="color:black;">[+ Détails]</a>
-                                    Consultations : {{ geek.visits|length }} personnes ont visité ce profil
+                                    Consultations : {{ geek.visits|length }} people visited this profile
                                 </th>
                             </tr>
                             </thead>
@@ -47,7 +47,7 @@
                                 {% for visit in geek.visits %}
                                     <tr class="odd">
                                         <td>
-                                            Un utilisateur a visité ce profil le
+                                            An user visited that profil on
                                             {{ visit.dateVisit|date('d/m/Y') }} à
                                             {{ visit.dateVisit|date('H:i:s') }}
                                         </td>
