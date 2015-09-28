@@ -1,0 +1,72 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+        <header id="top"></header>
+
+        <section id="wrapper">
+
+            {% include 'FionaGeek2geekCoreBundle:Layout:topsearch.html.twig' %}
+
+
+            <section id="search_corps">
+
+
+                {% include 'FionaGeek2geekCoreBundle:Layout:leftsearch.html.twig' %}
+
+                <div class="listing">
+
+                    <section style="background: rgba(255,255,255,0.7);padding:10px;">
+                        <strong>Email : </strong> <a class="mailto" href="mailto:{{ geek.email }}">{{ geek.email }}</a><br />
+
+                        {% if geek.interests|length <= 0 %}
+                            <br />Cette personne n'a aucun centres d'intérêts
+                        {% endif %}
+
+                        {% for interest in geek.interests %}
+                            <div class="interet"><div class="vign"></div>{{ interest.label }}</div>
+                        {% endfor %}
+
+                        <div style="clear:both;"></div>
+
+                    </section>
+
+                    <section id="consultations">
+                        <table>
+                            <thead>
+                            <tr class="head">
+                                <th>
+                                    <a href="javascript:void(0);" onclick="consultTab($(this));" style="color:black;">[+ Détails]</a>
+                                    Consultations : {{ geek.visits|length }} personnes ont visité ce profil
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody id="consultationTab">
+
+
+                                {% for visit in geek.visits %}
+                                    <tr class="odd">
+                                        <td>
+                                            Un utilisateur a visité ce profil le
+                                            {{ visit.dateVisit|date('d/m/Y') }} à
+                                            {{ visit.dateVisit|date('H:i:s') }}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+
+                    </section>
+
+
+                </div>
+
+            </section>
+
+
+
+        </section>
+
+
+{% endblock %}

@@ -1,0 +1,104 @@
+<?php
+
+namespace Fiona\Geek2geek\CoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Visit
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Fiona\Geek2geek\CoreBundle\Repository\VisitRepository")
+ */
+class Visit
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateVisit", type="datetime")
+     */
+    private $dateVisit;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ip", type="string", length=255)
+     */
+    private $ip;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Geek", inversedBy="visits")
+     *
+     */
+    private $geek;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set dateVisit
+     *
+     * @param \DateTime $dateVisit
+     *
+     * @return Visit
+     */
+    public function setDateVisit($dateVisit)
+    {
+        $this->dateVisit = $dateVisit;
+
+        return $this;
+    }
+
+    /**
+     * Get dateVisit
+     *
+     * @return \DateTime
+     */
+    public function getDateVisit()
+    {
+        return $this->dateVisit;
+    }
+
+    /**
+     * Set ip
+     *
+     * @param string $ip
+     *
+     * @return Visit
+     */
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
+
+        return $this;
+    }
+
+    /**
+     * Get ip
+     *
+     * @return string
+     */
+    public function getIp()
+    {
+        return $this->ip;
+    }
+}

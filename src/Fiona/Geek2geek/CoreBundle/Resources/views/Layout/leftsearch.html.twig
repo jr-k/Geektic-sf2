@@ -1,0 +1,57 @@
+<aside>
+    <header>
+        <img src="{{ asset('images/searchiconbar.png') }}">
+        Rechercher
+    </header>
+
+    <section>
+        <form method="post" action="{{ path('fiona_geek2geek_core_search') }}" id="formid">
+            <input type="text" name="gsearch" id="gsearch_bottom" value="{% if gsearchvalue is defined %}{{ gsearchvalue }}{% endif %}" placeholder="Rechercher...">
+            <ul>
+                <li class="male">
+                    <input type="radio" name="ggender" value="MALE" id="gmale" {% if ggendervalue is defined and ggendervalue == 'MALE' %}CHECKED{% endif %}>
+                    <label for="gmale">Homme</label>
+                </li>
+
+                <li class="female">
+                    <input type="radio" name="ggender" value="FEMALE" id="gfemale" {% if ggendervalue is defined and  ggendervalue == 'FEMALE' %}CHECKED{% endif %}>
+                    <label for="gfemale">Femme</label>
+                </li>
+
+                <li class="both">
+                    <input type="radio" name="ggender" value="BOTH" id="gboth" {% if ggendervalue is defined and (ggendervalue == 'BOTH' or ggendervalue == '') %}CHECKED{% endif %}>
+                    <label for="gboth">Tous</label>
+                </li>
+            </ul>
+
+            <div id="interets">
+
+                {% for interet in interets %}
+                    <div>
+                        <input type="checkbox" name="ginteret[]" id="interest_{{ interet.id }}" value="{{ interet.id }}"
+                                 {% if indexedInterests[interet.id] is defined %}checked="checked"{% endif %}/>
+                        <label for="interest_{{ interet.id }}">
+                            {{ interet.label }}
+                        </label>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <input type="submit" value="Rechercher" name="valider_recherche" id="valider">
+        </form>
+
+
+    </section>
+</aside>
+
+
+<script>
+    jQuery(function($){
+        {% if checkedtmpi is defined %}
+            {% for impl in checkedtmpi %}
+                checkInteret({{ impl }});
+            {% endfor %}
+        {% endif %}
+    });
+</script>
