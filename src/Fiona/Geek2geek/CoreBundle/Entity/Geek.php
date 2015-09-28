@@ -12,6 +12,21 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Geek
 {
+
+    public static $UPLOAD_DIR = "uploads/user/";
+
+    public function getPhoto() {
+
+        $pic = self::$UPLOAD_DIR.$this->id.".jpg";
+
+        if (!file_exists($pic)) {
+            return "resources/user/".strtolower($this->gender).".png";
+        }
+
+        return $pic;
+    }
+
+
     /**
      * @var integer
      *

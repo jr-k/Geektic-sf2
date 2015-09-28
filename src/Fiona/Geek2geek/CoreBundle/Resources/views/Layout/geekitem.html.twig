@@ -3,7 +3,7 @@
     <section class="bloc">
 
         <a href="{{ path('fiona_geek2geek_core_profile',{id:geek.id}) }}">
-            <img src="{{ asset('photos/'~geek.id~'.png') }}"  class="avatar">
+            <img src="{{ asset(geek.photo) }}"  class="avatar">
         </a>
 
         <header>
